@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character set and viewport meta tags for proper encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="F1 Driver Rankings - A premium single-page application displaying Formula 1 driver standings">
+    
+    <!-- Page title for browser tab -->
+    <title>F1 Driver Rankings</title>
+    
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main content area - semantic landmark for primary content -->
+    <main>
+        <!-- ====================================================
+             HERO SECTION
+             Full-height banner with title, subtitle, and
+             animated F1 car illustration
+             ==================================================== -->
+        <section class="hero">
+            <!-- Main heading - H1 for page title (only one per page) -->
+            <h1>Formula 1 Driver Rankings</h1>
+            
+            <!-- Descriptive subtitle -->
+            <p class="hero-subtitle">Current championship standings for the 2024 Formula 1 season</p>
+            
+            <!-- Animation container for F1 car SVG -->
+            <div class="animation-container">
+                <!-- F1 Car Illustration - Minimalist Line-Art SVG
+                     Viewbox: 240x80 units with car centered
+                     Styling applied via CSS for stroke, fill, etc. -->
+                <svg class="f1-car" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Chassis (Main Body) - central body of the car -->
+                    <path d="M 60 45 L 120 35 L 180 40 L 190 50 L 60 50 Z" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <!-- Front Wing - aerodynamic element at car front -->
+                    <path d="M 50 40 L 50 25 L 65 28 L 65 42 Z" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <!-- Rear Wing - aerodynamic element at car rear -->
+                    <path d="M 185 40 L 185 20 L 200 22 L 200 42 Z" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <!-- Front Left Wheel -->
+                    <circle cx="75" cy="52" r="6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <!-- Front Right Wheel -->
+                    <circle cx="95" cy="52" r="6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <!-- Rear Left Wheel -->
+                    <circle cx="160" cy="52" r="6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <!-- Rear Right Wheel -->
+                    <circle cx="180" cy="52" r="6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <!-- Cockpit Area - driver seating position -->
+                    <ellipse cx="105" cy="38" rx="8" ry="5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             DRIVER RANKINGS SECTION
+             Contains the list of F1 drivers with their standings
+             ==================================================== -->
+        <section class="rankings">
+            <div class="container">
+                <!-- Section heading - H2 for subsection -->
+                <h2>Current Standings</h2>
+                
+                <!-- Rankings wrapper for layout -->
+                <div class="rankings-wrapper">
+                    <!-- Driver list container - grid layout for driver cards
+                         JavaScript will populate driver cards here dynamically -->
+                    <div class="driver-list">
+                        <!-- Sample Driver Card Structure (template for dynamic rendering)
+                             Attributes:
+                             - data-driver-id: unique driver identifier
+                             - data-position: championship position (1-20)
+                             
+                             Card contains:
+                             - Position number (prominent, red color)
+                             - Driver info (name, team, country)
+                             - Points total (large, bold, red)
+                        -->
+                        <article class="driver-card" data-driver-id="1" data-position="1">
+                            <!-- Position/Rank display -->
+                            <div class="driver-position">1</div>
+                            
+                            <!-- Driver information section -->
+                            <div class="driver-info">
+                                <div class="driver-name">Sample Driver</div>
+                                <div class="driver-team">Sample Team</div>
+                                <div class="driver-country">Country</div>
+                            </div>
+                            
+                            <!-- Championship points -->
+                            <div class="driver-points">000</div>
+                        </article>
+                        <!-- Actual driver cards will be generated and inserted by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- External JavaScript file with data, rendering, and event logic -->
+    <script src="script.js"></script>
+</body>
+</html>
